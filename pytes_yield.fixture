@@ -1,0 +1,13 @@
+import time, pytest, unittest
+##################################################################
+@pytest.yield_fixture()
+def setUp():
+    print("before EACH method")
+    yield
+    print("Print AFTER each test")
+def test_login(setUp):
+    print("Test login...")
+
+def test_logout(setUp):
+    print("test logout...")
+
